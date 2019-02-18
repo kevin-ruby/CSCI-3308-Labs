@@ -1,0 +1,5 @@
+Kevin Ruby
+JC Abrahamson
+https://github.com/kevin-ruby/CSCI-3308-Labs
+
+I made a folder repo with the labs in them rather than a repo for each.. Lab 4 is labeled as lab_4/Lab_Website..
