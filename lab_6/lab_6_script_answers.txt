@@ -1,0 +1,41 @@
+KEVIN RUBY
+
+
+
+1.   football_db=# create table school(
+u_name varchar(50),
+Date_Established int,
+Adress varchar(200),
+student_population int,
+Acceptance_rate real
+);
+
+2.    football_db=# insert into school (u_name, Date_established, adress, student_population, Acceptance_rate)
+values('CU Boulder', 1876, '1100 28th St, Boulder, CO 80303', 35000,.8);
+
+
+3.   select name, major from football_players order by major;
+
+4.  select name, rushing_yards from football_players where rushing_yards >70;
+
+5. select * from football_games where visitor_name = 'Nebraska';
+
+6.   select * from football_games where home_score > visitor_score;
+
+7.   select visitor_name, game_date from football_games;
+
+8.  create view q8 as select count(*) from football_games where home_score > visitor_score;
+
+9.  create view q9 as select count(*) from football_games;
+
+10.   select (q8.count / cast(q9.count as float)) as "winning_per" from q8,q9;
+
+11.    select count(*) from football_games where 1 = any(players);
+
+12.  	* ***create two views with cedric’s rushing yards and total games played***
+
+	create view q12_1 as select count(*) from football_games where 1 = any(players);
+       	create view q12_2 as select rushing_yards from football_players where name='Cedric Vega';
+
+	** use two views to get answer**
+	select (q12_2.rushing_yards / cast(q12_1.count as float)) as AVG_RUSHING from 	q12_1,q12_2;
