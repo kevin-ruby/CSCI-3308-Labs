@@ -132,7 +132,8 @@ app.get('/player_info', function(req, res) {
           pyd:'',
           ryd:'',
           rcyd:'',
-          gp:''
+          gp:'',
+          img:''
           
       })
 
@@ -181,6 +182,7 @@ app.get('/player_info/post', function(req, res) {
         ryd:data[1][0].rushing_yards,
         rcyd:data[1][0].receiving_yards,
         gp:data[2][0].count,
+        img:data[1][0].img_src
         
       })
 
